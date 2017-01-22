@@ -70,6 +70,6 @@
   <CreateItem Include="$(SolutionDir)\Calculator\bin\Debug\*.*" >
       <Output ItemName="ZipFiles" TaskParameter="Include"/>
   </CreateItem>
-  <Zip ZipFileName="$(SolutionDir)\Calculator.zip" WorkingDirectory="$(SolutionDir)\Calculator\bin\Debug\" Files="@(ZipFiles)" />
+  <Zip ZipFileName="$(SolutionDir)\Calculator.$(BUILD_NUMBER).zip" WorkingDirectory="$(SolutionDir)\Calculator\bin\Debug\" Files="@(ZipFiles)" />
   </Target>
 </Project>
