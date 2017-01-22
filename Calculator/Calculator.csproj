@@ -67,9 +67,9 @@
   </Target>
   -->
     <Target Name="AfterBuild">
-  <CreateItem Include="$(SolutionDir)\Calculator\bin\Debug\*.*" >
+  <CreateItem Include="$(SolutionDir)\Calculator\bin\Release\*.*" >
       <Output ItemName="ZipFiles" TaskParameter="Include"/>
   </CreateItem>
-  <Zip ZipFileName="$(SolutionDir)\Calculator.$(BUILD_NUMBER).zip" WorkingDirectory="$(SolutionDir)\Calculator\bin\Debug\" Files="@(ZipFiles)" />
+  <Zip ZipFileName="$(SolutionDir)\Calculator.$(BUILD_NUMBER).zip" WorkingDirectory="$(SolutionDir)\Calculator\bin\Release\" Files="@(ZipFiles)" />
   </Target>
 </Project>
